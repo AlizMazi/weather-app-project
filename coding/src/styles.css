@@ -1,0 +1,140 @@
+.container {
+  max-width: 620px;
+  height: 1300px;
+  margin: 0 auto;
+  display: block;
+  padding: 20px 60px;
+  background-image: url(../image/sky.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Squada One", cursive;
+}
+#search-city {
+  border-radius: 30px 0 0 30px;
+  border: none;
+  padding: 1px 10px;
+  margin-left: 0;
+}
+#button {
+  border-radius: 0 30px 30px 0;
+  border: none;
+  color: #b1c2c9;
+}
+#current-button {
+  border-radius: 30px;
+  border: none;
+  color: #5c5b5b;
+  background-color: #ffffff;
+  margin: 15px;
+  padding: 5px 15px;
+}
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+#temp {
+  text-align: center;
+  font-size: 120px;
+}
+.temperature {
+  position: relative;
+  left: 20px;
+}
+#celsius {
+  position: relative;
+  top: -50px;
+}
+a {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0;
+}
+.circle {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 390px;
+  width: 390px;
+  position: relative;
+  left: 40px;
+}
+.degree {
+  position: relative;
+  left: 15px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+.row {
+  font-size: 20px;
+  position: relative;
+  left: 10px;
+}
+.row i {
+  font-size: 30px;
+  position: relative;
+  left: 5px;
+  margin-bottom: 5px;
+}
+ul {
+  position: relative;
+  left: -20px;
+  margin: 50px 0;
+  font-size: 23px;
+}
+li {
+  list-style: none;
+}
+.days {
+  padding: 10px 0;
+}
+ul i {
+  position: absolute;
+  left: 160px;
+  font-size: 40px;
+}
+h4 {
+  text-align: left;
+  position: relative;
+  right: -320px;
+  top: -480px;
+  font-size: 30px;
+}
+.comfortlevel {
+  text-decoration: underline;
+}
+.comfort {
+  font-size: 20px;
+  margin-top: 20px;
+  position: relative;
+  right: -15px;
+}
+h5 {
+  font-size: 30px;
+  position: relative;
+  top: -450px;
+  right: -320px;
+}
+.title {
+  text-decoration: underline;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.wind {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.coder {
+  position: relative;
+  top: -250px;
+  right: -200px;
+}
