@@ -135,6 +135,10 @@ h5 {
 }
 .coder {
   position: relative;
-  top: -250px;
-  right: -200px;
+  top: -270px;
+  color: black;
+}
+#github-link {
+  color: #0214b8;
+  font-size: 17px;
 }
