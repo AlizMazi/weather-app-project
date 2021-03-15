@@ -17,8 +17,8 @@ function formatTime(timestamp) {
     minutes = `0${minutes}`;
   }
   return `${hours}:${minutes}`;
-}
 
+}
 function submit(event) {
   event.preventDefault();
   let city = document.querySelector("#search-city").value;
@@ -39,12 +39,12 @@ forecast = response.data.list[index];
 forecastElement.innerHTML += `
 <div class="col-2">
           <div class="degree"> ${Math.round(forecast.main.temp)}°</div>
-          <img 
+          <img id="icons"
             src= "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
             <br />
              ${formatTime(forecast.dt * 1000)}
         </div>`;
- }
+}
 }
 function searchCity(city) {
   let unit= "metric"
@@ -54,25 +54,37 @@ function searchCity(city) {
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(todaysTemperature);
-  axios.get(apiUrl).then(displayForecast);
 }
 function currentWeather(response) {
   let h1 = document.querySelector("#city")
   h1.innerHTML = response.data.name;
+
   celsiusTemperature = response.data.main.temp;
   let header = document.querySelector("#temp")
+  
   header.innerHTML = Math.round(celsiusTemperature);
   let h2 = document.querySelector("h2");
+ 
   h2.innerHTML = response.data.weather[0].description;
   let h3 = document.querySelector("h3");
+ 
   h3.innerHTML = formatDate(response.data.dt * 1000);
   let h4 = document.querySelector("#humidity")
+  
   h4.innerHTML = response.data.main.humidity;
   let comfort = document.querySelector("#feels-like")
+  
   comfort.innerHTML = Math.round(response.data.main.feels_like);
+  let maxTemp = document.querySelector("#maxTemp");
+ 
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
+  let minTemp = document.querySelector("#minTemp");
+  
+  minTemp.innerHTML = Math.round(response.data.main.temp_min);
   let wind= document.querySelector("#speed")
-  wind.innerHTML = Math.round(response.data.wind.speed);
-  let icon = document.querySelector("#icon")
+  
+  wind.innerHTML = Math.round(response.data.wind.speed *3.6);
+  let icon = document.querySelector("#icons")
   icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   icon.setAttribute("alt",response.data.weather[0].description);
 }

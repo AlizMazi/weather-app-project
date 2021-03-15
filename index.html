@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0e65dd7da4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/styles.css"/>
    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
@@ -13,7 +14,7 @@
   <div class="container">
     <form id="search-form">
         <input type="text" placeholder="Search for a city..." autocomplete="off" autofocus="on" id="search-city"/>
-        <input type="submit" value = "Search" id="button"/>
+        <input type="submit" value ="Search" id="button"/>
         <input type="submit" value="Current" id="current-button" />
 
       </form>
@@ -41,26 +42,22 @@
         <div class="col-2">
           <div class="degree"> 2°</div>
             <img
-            src=``;
-            id="icon"/>
+            id="icons"/>
             <br />
              13:00
         </div>
         <div class="col-2">
           <div class="degree"> 4°</div>
-          
             <br />
              14:00
         </div>
         <div class="col-2">
           <div class="degree"> 5°</div>
-        
             <br />
              15:00
         </div>
         <div class="col-2">
           <div class="degree"> 5°</div>
-            
             <br />
              16:00
         </div>
@@ -72,69 +69,32 @@
         </div>
         <div class="col-2">
           <div class="degree"> 3°</div>
-            
             <br />
              18:00
         </div>
     </div>
     <hr />
-    <div class="row" id="fivedays-forecast">
-      <div class="col-7">
-     <ul>
-        <li class="days">
-            Tomorrow
-            <br />
-                3°/
-            <small>
-                0°
-            </small> 
-        </li>
-        <li class="days">
-            Tuesday 
-            <br />
-                4°/
-            <small>
-               -2°
-            </small> 
-        </li>
-        <li class="days">
-            Wednesday 
-            <br />
-                5° /
-            <small>
-                1°
-            </small>
-        </li>
-        <li class="days">
-            Thursday 
-            <br />
-                3°/
-            <small>
-               -1°
-            </small> 
-        </li>
-        <li class="days">
-            Friday 
-            <br /> 
-                4°/
-            <small>
-               -2°
-            </small> 
-        </li>
-    </ul>
-    </div>
-    <div class="col-5">
+    <div class="row" id="#comfortlevel">
+    <div class="col-7" >
     <h4>
-     <div class="comfortlevel">
+     <div class="comfort">
         Comfort level
      </div>
-        <p class="comfort">
+        <p class="comfort-data">
           Humidity: <span id="humidity">92 </span>%
             <br/>
             <br/>
           Feels like: <span id="feels-like">-7</span>°
+            <br>
+            <br>
+          Maximum temperature: <span id="maxTemp">0</span>°
+           <br>
+           <br>
+           Minimum temperature: <span id="minTemp">6</span>°
         </p>
     </h4>
+    </div>
+    <div class="col-4">
     <h5>
      <div class="title">
       Wind
@@ -142,7 +102,9 @@
      <p class="wind">
         Speed: <span id="speed">12-28</span> km/h 
      </p>
+    <i class="fas fa-wind" id="wind-icon"></i>
     </h5>
+    </div>
     </div>
     </div>
     <p class="coder">
